@@ -5,7 +5,9 @@ var express = require("express"),
 bodyParser = require("body-parser");
 
 app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://super-otter-9a5e11.netlify.app'
+}));
 app.use(fileupload());
 app.use(express.json({ limit: "100mb" }));
 app.use(bodyParser.urlencoded({ extended: true, parameterLimit: 100000 }));
