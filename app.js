@@ -6,7 +6,7 @@ bodyParser = require("body-parser");
 
 app = express();
 app.use(cors({
-  origin: 'https://super-otter-9a5e11.netlify.app'
+  origin: '*'
 }));
 app.use(fileupload());
 app.use(express.json({ limit: "100mb" }));
